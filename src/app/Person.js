@@ -1,4 +1,4 @@
-class Person{
+class Person {
 
   constructor(name, age){
     this.name = name;
@@ -20,8 +20,6 @@ class Person{
   setAge(){
     this.age = age;
   }
-
 }
 
-
-module.exports = Person;
+export default Person;
