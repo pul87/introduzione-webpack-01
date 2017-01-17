@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: './src/app/index.js',
@@ -17,7 +18,11 @@ const config = {
     }]
   },
   plugins: [
-    //new webpack.optimize.UglifyJsPlugin()
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      title: 'Applicazione utilissima'
+    }),
+    new webpack.optimize.UglifyJsPlugin()
   ]
 };
 
